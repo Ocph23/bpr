@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
+<body ng-app="app">
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -66,9 +66,13 @@
                 crossorigin="anonymous"
                 integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
         </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
+      
+          <script src="~/node_modules/@uirouter/angularjs/lib/angular.js" asp-append-version="true"></script>
+             <script src="~/node_modules/@uirouter/angularjs/release/ui-route-angular.js" asp-append-version="true"></script>
+               <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-
+    {{Data}}
+    <div ng-view></div>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

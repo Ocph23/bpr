@@ -1,4 +1,21 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿(function () {
+    'use strict';
 
-// Write your Javascript code.
+    angular.module('app', [
+        // Angular modules
+
+        // Custom modules
+
+        // 3rd Party Modules
+
+    ])
+    .controller("ctrl",function(){
+        $scope.Data="apakek";
+
+    })
+    
+    
+    
+    
+    ;
+})();
