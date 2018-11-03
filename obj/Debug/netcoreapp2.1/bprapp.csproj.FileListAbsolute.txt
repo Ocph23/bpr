@@ -14,8 +14,6 @@ D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.AssemblyInfo.cs
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.TagHelpers.input.cache
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.TagHelpers.output.cache
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.RazorCoreGenerate.cache
-D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\About.g.cshtml.cs
-D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\Contact.g.cshtml.cs
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\Error.g.cshtml.cs
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\Privacy.g.cshtml.cs
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\Shared\_CookieConsentPartial.g.cshtml.cs
@@ -29,5 +27,5 @@ D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.Views.pdb
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.dll
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.pdb
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\bprapp.csproj.CopyComplete
+D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\admin.g.cshtml.cs
 D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\Index.g.cshtml.cs
-D:\Projects\bpr\bprapp\obj\Debug\netcoreapp2.1\Razor\Pages\user.g.cshtml.cs
