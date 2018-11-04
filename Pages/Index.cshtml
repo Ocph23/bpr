@@ -1,6 +1,11 @@
 @page
   <script src="~/bower_components/angular/angular.js" asp-append-version="true"></script>
   <script src="~/bower_components/angular-ui-router/release/angular-ui-router.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="~/bower_components/tinymce/tinymce.js"></script>
+ 
+  <script type="text/javascript" src="~/bower_components/angular-ui-tinymce/src/tinymce.js"></script>
+  
+ 
    <script src="~/js/site.js" asp-append-version="true"></script>
    <script src="~/js/admin/admin.router.js" asp-append-version="true"></script>
     <script src="~/js/admin/admin.controller.js" asp-append-version="true"></script>
@@ -8,6 +13,17 @@
      <script src="~/js/main/main.router.js" asp-append-version="true"></script>
     <script src="~/js/main/main.controller.js" asp-append-version="true"></script>
      <script src="~/js/main/main.service.js" asp-append-version="true"></script>
+    <script src="js/dropzone/dist/dropzone.js" asp-append-version="true"></script>
+    
+<link rel="stylesheet" href="~/js/dropzone/dist/basic.css">
+<link rel="stylesheet" href="~/js/dropzone/dist/dropzone.css">
+
   <div ng-app="app">
       <ui-view></ui-view>
   </div>
+
+   <script type="text/javascript">
+
+        Dropzone.autoDiscover = false;
+
+    </script>

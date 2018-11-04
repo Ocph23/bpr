@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 
 namespace bprapp
 {
@@ -30,6 +32,8 @@ namespace bprapp
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddAntiforgery(options => options.HeaderName = "X-XSRF-TOKEN");
+
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -52,14 +56,9 @@ namespace bprapp
            
             app.UseCookiePolicy();
 
-            app.UseMvc(routes=>{
-                  routes.MapRoute(
-                name: "default",
-                template: "{controller=Home}/{action=Index}/{id?}");
-
-            });
-
+           
              app.UseStaticFiles();
+               app.UseMvcWithDefaultRoute();
         }
     }
 }

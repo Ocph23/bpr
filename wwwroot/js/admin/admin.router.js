@@ -23,6 +23,7 @@ app.config(function($stateProvider) {
     .state('newblog', {
       url: '/newblog',
       parent: 'admin',
-      templateUrl:'admin/templates/newpost.html'
+      templateUrl:'admin/templates/newpost.html',
+      controller:"NewPostController"
   })
   });
