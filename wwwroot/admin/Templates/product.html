@@ -1,0 +1,34 @@
+      <div class="main-content-container container-fluid px-4" ng-init=Init()>
+          <!-- Page Header -->
+          <div class="page-header row no-gutters py-4">
+            <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+              <span class="text-uppercase page-subtitle">Components</span>
+              <h3 class="page-title">{{Title}}</h3>
+              <div  class="color-switcher-toggle animated pulse infinite">
+                  <i ui-sref="newproduct" class="material-icons">add</i>
+                </div>
+            </div>
+          </div>
+          <!-- End Page Header -->
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4" ng-repeat="item in Datas" >
+              <div class="card card-small card-post card-post--1" >
+                <div class="card-post__image" style="background-image: url('uploads/{{item.imageURL}}');">
+                  <a class="card-post__category badge badge-pill badge-dark" href="#">{{item.name}}</a>
+                  <div class="card-post__author d-flex">
+                    <a class="card-post__author-avatar card-post__author-avatar--small" style="background-image: url('admin/images/avatars/0.jpg');" href="#">Written by Anna Kunis</a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a class="text-fiord-blue" href="#">{{item.title}}</a>
+                  </h5>
+                  <p class="card-text" ng-bind-html="item.content"></p>
+                  <span class="text-muted">{{item.updateDate}}</span>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+         
+        </div>

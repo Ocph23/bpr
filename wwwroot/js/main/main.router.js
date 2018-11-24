@@ -12,19 +12,20 @@ app.config(function($stateProvider) {
     templateUrl:'main/home.htm'
 })
 
-  .state('about', {
-      url: '/about',
+  .state('mainprofile', {
+      url: '/profile',
       parent: 'main',
-      templateUrl:'main/about.html'
+      templateUrl:'main/profile.html',
+      controller:"MainProfileController"
   })
   .state('contact', {
     url: '/contact',
     parent: 'main',
     templateUrl:'main/contact.htm'
   })
-    .state('mainmainnewblog', {
-      url: '/blog',
+    .state('mainproduct', {
+      url: '/product',
       parent: 'main',
-     // templateUrl:'templates/newpost.html'
+      templateUrl:'main/product.html'
   })
   });

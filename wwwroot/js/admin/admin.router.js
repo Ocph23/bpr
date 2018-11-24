@@ -15,15 +15,30 @@ app.config(function($stateProvider) {
       parent: 'admin',
       templateUrl:'admin/templates/dashboard.html'
   })
-  .state('blog', {
-    url: '/blog',
+  .state('profile', {
+    url: '/profile',
     parent: 'admin',
-    templateUrl:'admin/templates/blog.html'
+    templateUrl:'admin/templates/profile.html',
+    controller:"ProfileController"
   })
-    .state('newblog', {
-      url: '/newblog',
+
+  .state('product', {
+    url: '/product',
+    parent: 'admin',
+    templateUrl:'admin/templates/product.html',
+    controller:"ProductController"
+  })
+    .state('newprofile', {
+      url: '/newprofile',
       parent: 'admin',
-      templateUrl:'admin/templates/newpost.html',
-      controller:"NewPostController"
+      templateUrl:'admin/templates/newprofile.html',
+      controller:"NewProfileController"
   })
+
+  .state('newproduct', {
+    url: '/newproduct',
+    parent: 'admin',
+    templateUrl:'admin/templates/newproduct.html',
+    controller:"NewProductController"
+})
   });

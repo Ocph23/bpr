@@ -8,6 +8,7 @@
   'main.controller',
   'main.service'
 ])
+
 .config(function($stateProvider,$urlRouterProvider) {
   $urlRouterProvider.when("", "main/home")
  })

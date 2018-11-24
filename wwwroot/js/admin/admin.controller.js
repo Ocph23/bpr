@@ -1,20 +1,37 @@
 var app = angular.module('admin.controller',  ['ui.tinymce'])
 
-.controller('NewPostController', NewPostController);
+.controller('NewProductController', NewProductController)
+.controller('ProductController', ProductController)
+.controller('NewProfileController',NewProfileController)
+.controller('ProfileController',ProfileController);
 
 
-function NewPostController($scope){
-
+function NewProfileController($scope, $http,$q){
+   
+    $scope.Model={};
     $scope.tinymceModel = 'Initial content';
   
-    $scope.getContent = function() {
-      console.log('Editor content:', $scope.tinymceModel);
-    };
-  
-    $scope.setContent = function() {
-      $scope.tinymceModel = 'Time: ' + (new Date());
+    $scope.SaveDraf = function() {
+      //  var deffer=$q.defer();
+        $scope.Model.Content=$scope.tinymceModel;
+        $http({
+            method: 'post',
+            url: '/Profile/Post',
+            data:$scope.Model
+          }).then(function successCallback(response) {
+             alert("Success");
+            }, function errorCallback(response) {
+            alert(response.data.Message);
+            });
+       // return deffer.promise;
     };
 
+    $scope.Publish = function() {
+        //  var deffer=$q.defer();
+          $scope.Model.Content=$scope.tinymceModel;
+          $scope.Model.Status="Publish";
+         $scope.SaveDraf();
+      };
 
     $scope.partialDownloadLink = 'http://localhost:8080/download?filename=';
     $scope.filename = '';
@@ -44,5 +61,20 @@ function NewPostController($scope){
         toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
         
     };
+}
+
+
+function ProfileController($scope,$http,ProfileService)
+{
+    $scope.Title="Daftar Profile"
+    $scope.Profile=ProfileService;
+}
+
+
+function NewProductController(){}
+
+function ProductController($scope,$http){
+$scope.Title="Products";
+
 }
 
