@@ -18,6 +18,19 @@ app.config(function($stateProvider) {
       templateUrl:'main/profile.html',
       controller:"MainProfileController"
   })
+  .state('detailprofile', {
+    url: '/detailprofile',
+    params:{
+        data:null
+    },
+    parent: 'main',
+    templateUrl:'main/detailprofile.html',
+    controller:"DetailProfileController"
+})
+
+
+
+
   .state('contact', {
     url: '/contact',
     parent: 'main',

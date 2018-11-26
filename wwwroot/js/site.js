@@ -1,6 +1,9 @@
-﻿var app = angular.module('app', 
+﻿
+var app = angular.module('app', 
 [
+  'angularSuperGallery',
   'ui.router',
+  'ui.bootstrap',
   'admin.router',
   'admin.controller',
   'admin.service',

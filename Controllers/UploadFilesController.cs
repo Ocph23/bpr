@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Ocph.DAL;
 
 namespace bprapp.Controllers
 {
@@ -26,7 +27,9 @@ namespace bprapp.Controllers
         public async Task<IActionResult> Post(List<IFormFile> files)
 
         {
-            long size = files.Sum(f => f.Length);
+          try
+          {
+                long size = files.Sum(f => f.Length);
 
                 string contentRootPath = _hostingEnvironment.ContentRootPath;
                var filePath = Path.Combine(
@@ -44,10 +47,21 @@ namespace bprapp.Controllers
                             await file.CopyToAsync(stream);
                         }
                     }
+                    using(var db = new OcphDbContext())
+                    {
+                        var result = db.Photos.Insert(new Photo{FileName=file.FileName});
+                    }
+
+
+
                 }
-
-
             return Ok(new { count = files.Count, size, filePath});
+          }
+          catch (System.Exception ex)
+          {
+              
+              return BadRequest(ex);
+          }
 
         }
 

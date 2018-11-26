@@ -15,10 +15,12 @@
           <form class="add-new-post">
             <input ng-model="Model.Name" class="form-control form-control-lg mb-3" type="text" placeholder="Name">
             <input ng-model="Model.Title" class="form-control form-control-lg mb-3" type="text" placeholder="Profile Title">
+            <input ng-model="Model.ImageURL" class="form-control form-control-lg mb-3" type="text" placeholder="Profile Image">
             <textarea ng-model="Model.ShortDescription" class="form-control form-control-lg mb-3" type="text" placeholder="Short Description"></textarea>
             <textarea ui-tinymce="tinymceOptions" ng-model="tinymceModel"></textarea>
             <form method="post" ng-controller="TinyMceController">
             </form>
+            
             <div class="list-group-item d-flex">
               <div>
                   <button ng-click="SaveDraf()" class="btn btn-sm btn-outline-accent">
@@ -36,11 +38,4 @@
   
   </div>
   
-</div>
-
-<div class="well">
-    <form  class="dropzone" dropzone="" id="dropzone" method="POST" enctype="multipart/form-data">
-        <div class="dz-default dz-message">
-        </div>
-    <form>
 </div>

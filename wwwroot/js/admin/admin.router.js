@@ -41,4 +41,11 @@ app.config(function($stateProvider) {
     templateUrl:'admin/templates/newproduct.html',
     controller:"NewProductController"
 })
+
+.state('galeries', {
+  url: '/galeries',
+  parent: 'admin',
+  templateUrl:'admin/templates/galeries.html',
+  controller:"GaleriesController"
+})
   });

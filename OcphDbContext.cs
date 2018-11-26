@@ -11,5 +11,6 @@ namespace bprapp{
 
         public IRepository<Profile> Profiles{get{return new Repository<Profile>(this);}}
         public IRepository<Profile> Products{get{return new Repository<Profile>(this);}}
+         public IRepository<Photo> Photos{get{return new Repository<Photo>(this);}}
     }
 }
