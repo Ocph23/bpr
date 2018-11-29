@@ -1,44 +1,58 @@
-var app = angular.module('main.router',[]);
-app.config(function($stateProvider) {
+var app = angular.module('main.router', []);
+app.config(function ($stateProvider) {
   $stateProvider
-  .state('main', {
+    .state('main', {
       url: '/main',
-      templateUrl:'main/index.html'
-  })
+      templateUrl: 'main/index.html'
+    })
 
-  .state('home', {
-    url: '/home',
-    parent: 'main',
-    templateUrl:'main/home.htm'
-})
+    .state('home', {
+      url: '/home',
+      parent: 'main',
+      templateUrl: 'main/home.htm',
+      controller:'HomeController'
+    })
 
-  .state('mainprofile', {
+    .state('mainprofile', {
       url: '/profile',
       parent: 'main',
-      templateUrl:'main/profile.html',
-      controller:"MainProfileController"
-  })
-  .state('detailprofile', {
-    url: '/detailprofile',
-    params:{
-        data:null
-    },
-    parent: 'main',
-    templateUrl:'main/detailprofile.html',
-    controller:"DetailProfileController"
-})
+      templateUrl: 'main/profile.html',
+      controller: "MainProfileController"
+    })
+    .state('detailprofile', {
+      url: '/detailprofile',
+      params: {
+        data: null
+      },
+      parent: 'main',
+      templateUrl: 'main/detailprofile.html',
+      controller: "DetailProfileController"
+    })
 
 
 
 
-  .state('contact', {
-    url: '/contact',
-    parent: 'main',
-    templateUrl:'main/contact.htm'
-  })
+    .state('contact', {
+      url: '/contact',
+      parent: 'main',
+      templateUrl: 'main/contact.htm'
+    })
+
     .state('mainproduct', {
       url: '/product',
       parent: 'main',
-      templateUrl:'main/product.html'
-  })
-  });
+      templateUrl: 'main/product.html',
+      controller: "MainProductController"
+    })
+
+    .state('detailproduct', {
+      url: '/detailproduct',
+      params: {
+        data: null
+      },
+      parent: 'main',
+      templateUrl: 'main/detailproduct.html',
+      controller: "DetailProductController"
+    })
+
+});

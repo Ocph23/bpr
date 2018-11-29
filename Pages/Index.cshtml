@@ -11,7 +11,11 @@
  <script src="~/node_modules/angular-animate/angular-animate.js"></script>
    <script src="~/node_modules/angular-touch/angular-touch.js"></script>
  <link href="~/node_modules/angular-super-gallery/dist/angular-super-gallery.css" rel="stylesheet" type="text/css"/>
- 
+
+    <link href="~/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
+    <link href="~/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
+    <link href="~/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
+   
    <script src="~/js/site.js" asp-append-version="true"></script>
    <script src="~/js/admin/admin.router.js" asp-append-version="true"></script>
     <script src="~/js/admin/admin.controller.js" asp-append-version="true"></script>
@@ -24,6 +28,7 @@
 <link rel="stylesheet" href="~/js/dropzone/dist/basic.css">
 <link rel="stylesheet" href="~/js/dropzone/dist/dropzone.css">
 
+
   <div ng-app="app">
       <ui-view></ui-view>
   </div>
@@ -33,3 +38,5 @@
         Dropzone.autoDiscover = false;
 
     </script>
+
+ 

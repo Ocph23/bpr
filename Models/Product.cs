@@ -1,44 +1,44 @@
 using System;
-using Ocph.DAL;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using Ocph.DAL;
 
+namespace bprapp.Models {
+    [TableName ("product")]
+    public class Product {
 
-namespace bprapp.Models
-{
-    [TableName("profile")]
-    public class Product{
+        private int productId;
+        [PrimaryKey ("productId")]
+        [DbColumn ("productId")]
+        public int ProductId { get; set; }
 
-        private int profileId;
-        [PrimaryKey("ProfileId")]
-        [DbColumn("ProfileId")]
-        public int ProfileId{get;set;}
-
-
-        [DbColumn("Title")]
+        [DbColumn ("Title")]
         public string Title { get; set; }
 
-        [DbColumn("Content")]
+        [DbColumn ("Content")]
         public string Content { get; set; }
 
-        [DbColumn("CreateDate")]
+        [DbColumn ("CreateDate")]
         public DateTime CreateDate { get; set; }
-        
-        [DbColumn("UpdateDate")]
-        public DateTime UpdateDate { get; set; }
-        
-         [JsonConverter(typeof(StringEnumConverter))]
-        [DbColumn("status")]
-        public ItemStatus Status { get; set; }
 
-        [DbColumn("Name")]
+        [DbColumn ("UpdateDate")]
+        public DateTime UpdateDate { get; set; }
+
+        [DbColumn ("Name")]
         public string Name { get; set; }
 
-        [DbColumn("ImageURL")]
+        [DbColumn ("ImageURL")]
         public string ImageURL { get; set; }
 
-        [DbColumn("Tumbler")]
+        [DbColumn ("Tumbler")]
         public string Tumbler { get; set; }
+
+        [DbColumn ("ShortDescription")]
+        public string ShortDescription { get; set; }
+
+        [JsonConverter (typeof (StringEnumConverter))]
+        [DbColumn ("status")]
+        public ItemStatus Status { get; set; }
 
     }
 }

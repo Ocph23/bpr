@@ -1,63 +1,67 @@
-﻿
-var app = angular.module('app', 
-[
-  'angularSuperGallery',
-  'ui.router',
-  'ui.bootstrap',
-  'admin.router',
-  'admin.controller',
-  'admin.service',
-  'main.router',
-  'main.controller',
-  'main.service'
-])
+﻿var angular = require('angular');
+var PNotify = require('pnotify/dist/umd/PNotify');
+var PNotifyButtons = require('pnotify/dist/umd/PNotifyButtons');
 
-.config(function($stateProvider,$urlRouterProvider) {
-  $urlRouterProvider.when("", "main/home")
- })
- .directive('dropzone', function() {
-  return {
-      restrict: 'C',
-      link: function(scope, element, attrs) {
+var app = angular.module('app',
+    [
+        'PNotify',
+        'angularSuperGallery',
+        'ui.router',
+        'ui.bootstrap',
+        'admin.router',
+        'admin.controller',
+        'admin.service',
+        'main.router',
+        'main.controller',
+        'main.service'
+    ])
 
-          var config = {
-              url: 'https://localhost:5001/uploadfiles',
-              maxFilesize: 30000,
-              paramName: "files",
-              maxThumbnailFilesize: 10,
-              parallelUploads: 10,
-              autoProcessQueue: true
-          };
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.when("", "main/home")
+    })
+    .directive('dropzone', function () {
+        return {
+            restrict: 'C',
+            link: function (scope, element, attrs) {
 
-          var eventHandlers = {
-              'addedfile': function(file) {
-                  scope.file = file;
-                  if (this.files[1]!=null) {
-                      this.removeFile(this.files[0]);
-                  }
-                  scope.$apply(function() {
-                      scope.fileAdded = true;
-                  });
-              },
+                var config = {
+                    url: 'https://localhost:5001/uploadfiles',
+                    maxFilesize: 30000,
+                    paramName: "files",
+                    maxThumbnailFilesize: 10,
+                    parallelUploads: 10,
+                    autoProcessQueue: true
+                };
 
-              'success': function (file, response) {
-              }
+                var eventHandlers = {
+                    'addedfile': function (file) {
+                        scope.file = file;
+                        if (this.files[1] != null) {
+                            this.removeFile(this.files[0]);
+                        }
+                        scope.$apply(function () {
+                            scope.fileAdded = true;
+                        });
+                    },
 
-          };
+                    'success': function (file, response) {
+                    }
 
-          dropzone = new Dropzone(element[0], config);
+                };
 
-          angular.forEach(eventHandlers, function(handler, event) {
-              dropzone.on(event, handler);
-          });
+                dropzone = new Dropzone(element[0], config);
 
-          scope.processDropzone = function() {
-              dropzone.processQueue();
-          };
+                angular.forEach(eventHandlers, function (handler, event) {
+                    dropzone.on(event, handler);
+                });
 
-          scope.resetDropzone = function() {
-              dropzone.removeAllFiles();
-          }
-      }
-  }
-});
+                scope.processDropzone = function () {
+                    dropzone.processQueue();
+                };
+
+                scope.resetDropzone = function () {
+                    dropzone.removeAllFiles();
+                }
+            }
+        }
+    });
