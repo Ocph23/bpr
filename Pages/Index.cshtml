@@ -1,32 +1,31 @@
 @page
+    
+<link rel="stylesheet" href="~/bower_components/dropzone/dist/basic.css">
+<link rel="stylesheet" href="~/bower_components/dropzone/dist/dropzone.css">
+<script src="bower_components/dropzone/dist/dropzone.js" asp-append-version="true"></script>
   <script src="~/bower_components/angular/angular.js" asp-append-version="true"></script>
   <script src="~/bower_components/angular-ui-router/release/angular-ui-router.js" asp-append-version="true"></script>
-  <script src="~/node_modules/ui-bootstrap4/dist/ui-bootstrap.js" asp-append-version="true"></script>
-
+  <script src="~/js/ui-bootstrap-tpls-3.0.5.min.js" asp-append-version="true"></script>
     <script type="text/javascript" src="~/bower_components/tinymce/tinymce.js"></script>
- 
   <script type="text/javascript" src="~/bower_components/angular-ui-tinymce/src/tinymce.js"></script>
-  
-<script src="~/node_modules/angular-super-gallery/dist/angular-super-gallery.js"></script>
- <script src="~/node_modules/angular-animate/angular-animate.js"></script>
-   <script src="~/node_modules/angular-touch/angular-touch.js"></script>
- <link href="~/node_modules/angular-super-gallery/dist/angular-super-gallery.css" rel="stylesheet" type="text/css"/>
+<script src="~/bower_components/angular-super-gallery/dist/angular-super-gallery.js"></script>
+ <script src="~/bower_components/angular-animate/angular-animate.js"></script>
+   <script src="~/bower_components/angular-touch/angular-touch.js"></script>
+ <link href="~/bower_components/angular-super-gallery/dist/angular-super-gallery.css" rel="stylesheet" type="text/css"/>
+   <script src="~/bower_components/requirejs/require.js" asp-append-version="true"></script>
 
-    <link href="~/vendors/pnotify/dist/pnotify.css" rel="stylesheet">
-    <link href="~/vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet">
-    <link href="~/vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet">
-   
-   <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+  
+
    <script src="~/js/admin/admin.router.js" asp-append-version="true"></script>
     <script src="~/js/admin/admin.controller.js" asp-append-version="true"></script>
      <script src="~/js/admin/admin.service.js" asp-append-version="true"></script>
      <script src="~/js/main/main.router.js" asp-append-version="true"></script>
     <script src="~/js/main/main.controller.js" asp-append-version="true"></script>
      <script src="~/js/main/main.service.js" asp-append-version="true"></script>
-    <script src="js/dropzone/dist/dropzone.js" asp-append-version="true"></script>
     
-<link rel="stylesheet" href="~/js/dropzone/dist/basic.css">
-<link rel="stylesheet" href="~/js/dropzone/dist/dropzone.css">
+  
+    
 
 
   <div ng-app="app">
@@ -36,6 +35,7 @@
    <script type="text/javascript">
 
         Dropzone.autoDiscover = false;
+ 
 
     </script>
 

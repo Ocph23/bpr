@@ -1,0 +1,14 @@
+{
+  "name": "angular-super-gallery",
+  "homepage": "https://github.com/schalkt/angular-super-gallery",
+  "version": "1.5.10",
+  "_release": "1.5.10",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.5.10",
+    "commit": "f96bee0d930633707e60aeb51d9b3291082ce1a8"
+  },
+  "_source": "https://github.com/schalkt/angular-super-gallery.git",
+  "_target": "1.5.10",
+  "_originalSource": "angular-super-gallery"
+}

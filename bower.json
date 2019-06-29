@@ -1,0 +1,21 @@
+{
+    "name": "bankpmm",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "jquery":"latest",
+        "angular": "1.7.5",
+        "angular-animate":"latest",
+        "angular-ui-router":"1.0.20",
+        "angular-ui-tinymce": "0.0.18",
+        "pnotify": "^3.0.0",
+        "dropzone": "5.5.0",
+        "tinymce": "latest",
+        "angular-super-gallery":"1.5.10",
+        "screenfull":"3.3.3",
+        "angular-touch":"latest",
+        "bootstrap":"3.3.7",
+        "requirejs":"latest",
+        "nprogress": "^0.2.0"
+    }
+  }

@@ -51,7 +51,7 @@ using bprapp;
             WriteLiteral("<!doctype html>\r\n<html class=\"no-js h-100\" lang=\"en\">\r\n  ");
             EndContext();
             BeginContext(64, 1113, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c1ccb04f5c5043e4904756d6945daa16", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "69b8471d03b14b97960052be808ce310", async() => {
                 BeginContext(70, 1100, true);
                 WriteLiteral(@"
     <meta charset=""utf-8"">
@@ -83,7 +83,7 @@ using bprapp;
             WriteLiteral("\r\n  ");
             EndContext();
             BeginContext(1181, 1496, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cfdd859e4295437cb9245e1dfdbcd759", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0396a073da014c71aed7a23291bfa0d1", async() => {
                 BeginContext(1214, 1456, true);
                 WriteLiteral(@"
      <a ui-sref=""admin"">Home </a>

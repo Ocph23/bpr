@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "96eb3e1a714c86316eff3a737a75536782047668"
+    "signature": "9fc9ca290edd5a07c14d96a598024f63b60a5b25"
   },
   "compilationOptions": {
     "defines": [
@@ -26,6 +26,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.NETCore.App": "2.1.0",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.0.2105168",
           "MySql.Data": "8.0.13",
           "Newtonsoft.Json": "11.0.2",
           "OcphDAL": "3.0.5"
@@ -217,6 +218,7 @@
       },
       "Microsoft.NETCore.Platforms/2.1.0": {},
       "Microsoft.NETCore.Targets/2.1.0": {},
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.2105168": {},
       "MySql.Data/8.0.13": {
         "dependencies": {
           "Google.Protobuf": "3.5.1",
@@ -3285,6 +3287,13 @@
       "sha512": "sha512-etaYwrLZQUS+b3UWTpCnUggd6SQ/ZIkZ5pHnoR7+dIWt/wp2Rv3CvMKOZISsrt7FYCHKwCxfcepuuyEWkQxADg==",
       "path": "microsoft.netcore.targets/2.1.0",
       "hashPath": "microsoft.netcore.targets.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.0.2105168": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvTqpjvXEnfPjwIO92QeTWyBNPjVBllt9dws/E29erQRH3BmM46OwO4Hromu4/YtXjDPilHAij3SQP5hDyvvFQ==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.0.2105168",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.0.2105168.nupkg.sha512"
     },
     "MySql.Data/8.0.13": {
       "type": "package",

@@ -1,0 +1,75 @@
+
+  
+<style>
+
+    .custom-panel .asg-panel .items {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+        justify-content:stretch;
+        align-items: stretch;
+        align-content: stretch;
+       
+    }
+
+    .custom-panel .asg-panel .item {
+        display: inline;
+        transition: all ease 0.2s;
+        opacity: 0.9;
+        transform: scale(0.95);
+        z-index: 10;
+    }
+
+    .custom-panel .asg-panel .item.selected {
+        opacity: 1;
+    }
+
+    .custom-panel .asg-panel .item:hover {
+        z-index: 11;
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0px 0px 10px #141414;
+    }
+
+    .custom-panel .asg-panel .item img {
+        height: 85%;
+      width: 100%;
+    }
+
+
+</style>
+<div class="container">
+<div class="panel custom-panel">
+  <div class="conyainer">
+         
+    <script type="text/ng-template" id="custom-info.html">
+        {{ $ctrl.file.description }}
+    </script>
+<script type="text/ng-template" id="custom-control.html">
+   
+</script>
+
+<asg-image data-id="girls">
+    <asg-info data-template="custom-info.html"></asg-info>
+    <asg-modal>
+        <asg-thumbnail></asg-thumbnail>
+    </asg-modal>
+</asg-image>
+<asg-control data-id="girls" data-template="custom-control.html"></asg-control>
+<asg-panel data-id="girls"
+           data-options="options2"
+           data-items="files2"
+           class="thumbnail clearfix">
+</asg-panel>
+
+<div class="well">
+    <form  class="dropzone" dropzone="" id="dropzone" method="POST" enctype="multipart/form-data">
+        <div class="dz-default dz-message">
+        </div>
+    <form>
+</div>
+
+  </div>
+</div>
+</div>
